@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MaCred v1.0</title>
+  <meta name="description" content="Credit Card Generator">
+  <meta name="keywords" content="namso,ccgen,ccgen online,namso online, card, cc, bin,generador tarjetas,tarjetas,generador, bin check, bin search, bin find, find bin, check bin, search bin, bank identification number, bin, iin, issuer identification number, check iin, find iin, search iin, iin check, iin search, iin find, bank, card search, card check, card find, merchant bin, merchant, bin lookup, bin checker, bin list, carding, carder, generate cc, namso, ccgen, credit card, infocc, bin, gerador de cartões de créditos, tarjetas, generator, darkside, checker cc, gerador, bins, gerar cc, mastercard, visa, amex, discover, diners club">
+  <meta name="author" content="Leonid Krstevski">
+  <link rel="icon" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="title"><img src="logo.svg" alt="Icon"> МаКред 1.0</div>
+    <div class="hh-title"> Генератор на Кредитни Картички</div>
+    <div class="p" id="cards">
+      <i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-mastercard"></i> <i class="fa-brands fa-cc-amex"></i> <i class="fa-brands fa-cc-discover"></i> <i class="fa-brands fa-cc-jcb"></i> <i class="fa-brands fa-cc-diners-club"></i>
+    </div>
+  </header>
+  <form name="console" id="console" class="form-horizontal" role="form">
+    <div class="p">
+      <div class="Ilabel"><i class="fa-solid fa-bank"></i> Банка </div>
+      <select id="bank" class="input_text s">
+        <option value="">Избери Банка</option>
+        <option value="TTK">ТТК Банка</option>
+        <option value="Stopanska">Стопанска Банка</option>
+        <option value="Sparkasse">Sparkasse Банка</option>
+        <option value="NLB">НЛБ Банка</option>
+        <option value="Komercijalna">Комерцијална Банка</option>
+        <option value="Halk">Халк Банка</option>
+      </select>
+    </div>
+    <div class="p">
+      <div class="Ilabel"><i class="fa-solid fa-binoculars"></i> БИН </div>
+      <select id="bins" class="input_text s">
+        <option value="">Избери БИН</option>
+      </select>
+    </div>
+    
+    </div>
+    <div class="crad-group">
+      <div class="p">
+        <div class="Ilabel"><i class="fa-solid fa-address-card"></i> CCV</div><input type="text" id="eccv" maxlength="4" style="width: 40px" value="случаен" class="input_text" name="eccv">
+        <div class="Ilabel"><i class="fa-solid fa-calendar-day"></i> Месец </div> <select id="emeses" class="input_text">
+          <option value="rnd">случаен</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <div class="Ilabel"><i class="fa-solid fa-calendar-week"></i> Година </div><select id="eyear" class="input_text">
+          <option value="rnd">случаен</option>
+          <option value="2024">2024</option>
+          <option value="2025">2025</option>
+          <option value="2026">2026</option>
+          <option value="2027">2027</option>
+          <option value="2028">2028</option>
+          <option value="2029">2029</option>
+          <option value="2030">2030</option>
+          <option value="2031">2031</option>
+          <option value="2032">2032</option>
+        </select>
+      </div>
+	  <div class="p">
+      <div class="card-group">
+        <div class="Ilabel"><i class="fa-solid fa-list"></i> Број </div><input class="input_text" type="number" id="ccghm" style="width: 40px" maxlength="4" value="10">
+        </select>
+      </div>
+    </div>
+    <button class="Lbutton" type="button" name="generar" id="generar"><i class="fa-solid fa-cog fa-spin"></i> Генерирај</button>
+    <center>
+      <div class="eighty">
+        <div>
+          <div class="clean" id="cleanText"></div>
+        </div><textarea class="textarea" name="output2" id="output2" rows="11" readonly=""></textarea>
+      </div>
+	  
+	    <img src="https://i.ibb.co/92rLvmP/Untitled-design-25.png" alt="Corner Image" class="corner-image">
+
+	  
+    </center>
+  </form>
+  <footer>
+    <p class="boldy"><i class="fa-solid fa-user-check"></i> Автор: <a href="https://instagram.com/krstevski_1204" target="_blank">Leonid Krstevski</a></p>
+    <p class="boldy"><i class="fa-solid fa-link"></i> Повеќе проекти: <a href="https://github.com/l3069" target="_blank">l3069</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<!--Оваа програма е наменета само за едукативни и тестирачки цели. Не треба да се користи за нелегални активности, вклучувајќи, но не ограничувајќи се на, измама, кражба на идентитет, или било каква друга незаконска дејност. Авторот не е одговорен за никаква злоупотреба на програмата и не презема никаква одговорност за последиците од користењето на истата.
+Автор: Леонид Крстевски.
+
+This program is intended for educational and testing purposes only. It should not be used for illegal activities, including, but not limited to, fraud, identity theft, or any other illegal activity. The author is not responsible for any misuse of the program and does not assume any responsibility for the consequences of using it.
+Author: Leonid Krstevski.-->
